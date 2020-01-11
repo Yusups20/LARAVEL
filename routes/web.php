@@ -57,7 +57,57 @@ Route::get('pesanan/{makan?}/{minum?}/{harga?}',function($mkn=null,$mnm=null,$hr
         echo "Dengan Harga : ".$hrg;
     }if ($mkn == null && $mnm == null && $hrg == null) {
         echo "Anda Belum Memesan";
-    }if (isset($makan)) {
-        echo "Anda Memesan Makan : ".$makan;
     }
+});
+
+Route::get('/testmodel', function() {
+$query = App\Post::all();
+return $query;
+});
+
+Route::get('/testmodel2', function() {
+$query = App\Post::find(1);
+return $query;
+});
+
+Route::get('/testmodel3', function() {
+$query = App\Post::where('title','like','%cepat nikah%')->get();
+return $query;
+});
+
+Route::get('/testmodel4', function() {
+$post = App\Post::find(1);
+$post->title = "Ciri Keluarga Sakinah";
+$post->save();
+return $post;
+});
+
+Route::get('/testmodel5', function() {
+$post = new App\Post;
+$post->title = "7 Amalan Pembuka Jodoh";
+$post->content = "shalat malam, sedekah, puasa sunah, silaturahmi, senyum, doa, tobat";
+$post->save();
+return $post;
+});
+
+Route::get('/penggajian', function() {
+$query = App\Penggajian::all();
+return $query;
+});
+
+Route::get('/penggajian-1',function(){
+    $gaji = App\Penggajian::where('agama','=','islam')->get();
+    return $gaji;
+});
+
+Route::get('tambah-data-gaji',function(){
+    $gaji = New App\Penggajian();
+    $gaji->nama = 'yusup';
+    $gaji->jabatan = 'boss';
+    $gaji->jk = 'laki laki';
+    $gaji->alamat = 'bandung';
+    $gaji->total_gaji = 10000000;
+    $gaji->agama = 'islam';
+    $gaji->save();
+    return $gaji;
 });
