@@ -111,3 +111,17 @@ Route::get('tambah-data-gaji',function(){
     $gaji->save();
     return $gaji;
 });
+
+Route::get('halooo','LaravelController@hallo');
+Route::get('halooo2','LaravelController@hallo2');
+Route::get('halooo3','LaravelController@hallo3');
+Route::get('halooo4','LaravelController@hallo4');
+Route::get('halooo5','LaravelController@hallo5');
+Route::get('halooo6','LaravelController@hallo6');
+Route::get('halooo7','LaravelController@hallo7');
+Route::get('halooo8','LaravelController@hallo8');
+Route::get('halooo9','LaravelController@hallo9');
+Route::get('halooo10','LaravelController@hallo10');
+Route::get('jeniskucing/{warna?}','LaravelController@jeniskucing');
+
+Route::get('membeli/{makan?}/{harga?}','LaravelController@beli');
