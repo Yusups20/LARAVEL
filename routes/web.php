@@ -125,3 +125,11 @@ Route::get('halooo10','LaravelController@hallo10');
 Route::get('jeniskucing/{warna?}','LaravelController@jeniskucing');
 
 Route::get('membeli/{makan?}/{harga?}','LaravelController@beli');
+
+//CRUD BOOK
+Route::get('book','BookController@index');
+Route::get('book-create/{judul}','BookController@create');
+Route::get('book-show/{id}','BookController@show');
+Route::get('book-edit/{id}/{jdl}','BookController@edit');
+Route::get('book-delete/{id}','BookController@delete');
+Route::get('select','BookController@latihan1');

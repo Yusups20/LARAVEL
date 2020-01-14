@@ -70,7 +70,9 @@ class LaravelController extends Controller
         }
         }
         if (!$makan) {
-            echo "Silahkan Pilih item terlebih dahulu";
+            echo "Silahkan Memesan terlebih dahulu";
+        }else {
+            echo "Anda Memasukan Angka Yang Salah";
         }
     }
 }
