@@ -133,3 +133,14 @@ Route::get('book-show/{id}','BookController@show');
 Route::get('book-edit/{id}/{jdl}','BookController@edit');
 Route::get('book-delete/{id}','BookController@delete');
 Route::get('select','BookController@latihan1');
+Route::get('recordd','BookController@record');
+
+//Artikel
+// Route::get('ngoding','NgodingController@index');
+// Route::get('ngoding/create','NgodingController@create');
+// Route::get('ngoding/{id}','NgodingController@show');
+// Route::get('ngoding/{id}/edit','NgodingController@edit');
+// Route::PUT('ngoding/{id}','NgodingController@edit');
+// Route::delete('delete/{id}','NgodingController@destroy');
+
+Route::resource('ngoding','NgodingController');

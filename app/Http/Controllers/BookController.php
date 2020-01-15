@@ -54,7 +54,12 @@ class BookController extends Controller
     }
     public function latihan1()
     {
-        $a = Book::select('')->take(3)->get('title','publisher','pages','prize');
-        return $a;
+        $buku = Book::select('title','publisher','pages','price')->take(3)->get();
+        return $buku;
+    }
+    public function record()
+    {
+        $buku = Book::count();
+        return $buku;
     }
 }
