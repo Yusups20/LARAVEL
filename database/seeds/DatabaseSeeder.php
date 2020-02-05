@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         //  $this->call(PostsTablesSeeder::class);
         //  $this->call(Penggajian::class);
-         $this->call(NgodingSeeder::class);
+        //  $this->call(NgodingSeeder::class);
+        factory(Barang::class, 100)->create();
     }
 }
